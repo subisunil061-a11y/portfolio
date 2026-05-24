@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subin S | Portfolio</title>
+    <style>
+        :root {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --accent-color: #38bdf8;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        /* Header Section */
+        header {
+            text-align: center;
+            padding: 50px 20px;
+            border-bottom: 1px solid #334155;
+        }
+
+        header h1 {
+            font-size: 2.8rem;
+            color: var(--text-main);
+            margin-bottom: 10px;
+        }
+
+        header p {
+            color: var(--accent-color);
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        .contact-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .contact-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: color 0.3s;
+        }
+
+        .contact-links a:hover {
+            color: var(--accent-color);
+        }
+
+        /* Section Layouts */
+        section {
+            padding: 40px 0;
+            border-bottom: 1px solid #334155;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            margin-bottom: 25px;
+            color: var(--text-main);
+            position: relative;
+            display: inline-block;
+        }
+
+        h2::after {
+            content: '';
+            position: absolute;
+            width: 50%;
+            height: 3px;
+            background-color: var(--accent-color);
+            bottom: -5px;
+            left: 0;
+        }
+
+        /* Summary & Skills */
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 40px;
+        }
+
+        @media (max-width: 768px) {
+            .grid-2 { grid-template-columns: 1fr; }
+        }
+
+        .skills-tag-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .skill-tag {
+            background-color: var(--card-bg);
+            padding: 6px 12px;
+            border-radius: 6px;
+            font-size: 0.85rem;
+            color: var(--accent-color);
+            border: 1px solid #334155;
+        }
+
+        /* Projects Section */
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+
+        .project-card {
+            background-color: var(--card-bg);
+            border: 1px solid #334155;
+            border-radius: 10px;
+            padding: 25px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: transform 0.3s, border-color 0.3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent-color);
+        }
+
+        .project-card h3 {
+            margin-bottom: 10px;
+            font-size: 1.3rem;
+        }
+
+        .project-card p {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            margin-bottom: 20px;
+            flex-grow: 1;
+        }
+
+        .btn-group {
+            display: flex;
+            gap: 10px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 8px 16px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-align: center;
+            flex: 1;
+            transition: background 0.3s, color 0.3s;
+        }
+
+        .btn-primary {
+            background-color: var(--accent-color);
+            color: var(--bg-color);
+        }
+
+        .btn-primary:hover {
+            background-color: #7dd3fc;
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: var(--text-main);
+            border: 1px solid #475569;
+        }
+
+        .btn-secondary:hover {
+            background-color: #334155;
+        }
+
+        /* Timeline / Experience */
+        .timeline-item {
+            margin-bottom: 25px;
+        }
+
+        .timeline-item h3 {
+            font-size: 1.2rem;
+            color: var(--text-main);
+        }
+
+        .timeline-meta {
+            font-size: 0.85rem;
+            color: var(--accent-color);
+            margin-bottom: 8px;
+        }
+
+        .timeline-item p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>SUBIN S.</h1>
+        <p>Cross-Functional Engineer & Game Developer</p>
+        <div class="contact-links">
+            <a href="mailto:subins00123@gmail.com">📧 subins00123@gmail.com</a>
+            <a href="tel:+918848783883">📱 +91 8848783883</a>
+            <a href="https://www.linkedin.com/in/subin-s-32947b259" target="_blank">🔗 LinkedIn</a>
+            <a href="https://github.com/subisunil061-a11y" target="_blank">💻 GitHub</a>
+            <span style="color: var(--text-muted)">📍 Palakkad, Kerala, India</span>
+        </div>
+    </header>
+
+    <section class="grid-2">
+        <div>
+            <h2>About Me</h2>
+            <p style="color: var(--text-muted)">
+                A versatile professional holding a B.E. in Mechanical Engineering from Anna University alongside an MBA from the University of Calicut specializing in HR (Major) and Finance (Minor). 
+                I bridge technical precision, human resource management, and programmatic game development to design highly responsive systems and applications.
+            </p>
+        </div>
+        <div>
+            <h2>Core Skills</h2>
+            <div class="skills-tag-container">
+                <div class="skill-tag">Unity 6 Engine</div>
+                <div class="skill-tag">C# Scripting</div>
+                <div class="skill-tag">OOP Architecture</div>
+                <div class="skill-tag">Web Game Dev</div>
+                <div class="skill-tag">Quality Control (QC)</div>
+                <div class="skill-tag">HR Operations</div>
+                <div class="skill-tag">Quality assurance and Quality control</div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Featured Projects</h2>
+        <div class="project-grid">
+            
+            <div class="project-card">
+                <div>
+                    <span style="font-size: 0.75rem; color: var(--accent-color); font-weight: bold; text-transform: uppercase;">Software Engineering</span>
+                    <h3 style="margin-top: 5px;">3D Mobile Sports Engine</h3>
+                    <p>An eFootball architectural clone built in Unity 6 using C#. Features a 1D animation blend tree state engine, customized physics-based projectile charge multipliers, and frame-stabilized physics loops.</p>
+                </div>
+                <div class="btn-group">
+                    <a href="https://github.com/subisunil061-a11y" target="_blank" class="btn btn-secondary">Code Repo</a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div>
+                    <span style="font-size: 0.75rem; color: var(--accent-color); font-weight: bold; text-transform: uppercase;">Web Development</span>
+                    <h3 style="margin-top: 5px;">Grid Racing Game</h3>
+                    <p>An interactive grid-based navigation environment deployed smoothly on the web. Focuses on array pathway logic processing, continuous intersection tracking, and minimal asset rendering speeds.</p>
+                </div>
+                <div class="btn-group">
+                    <a href="https://subisunil061-a11y.github.io/grid-racing-game/" target="_blank" class="btn btn-primary">Play Live</a>
+                    <a href="https://github.com/subisunil061-a11y/grid-racing-game" target="_blank" class="btn btn-secondary">Code</a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div>
+                    <span style="font-size: 0.75rem; color: var(--accent-color); font-weight: bold; text-transform: uppercase;">Game Design</span>
+                    <h3 style="margin-top: 5px;">Monster Hunt Game</h3>
+                    <p>A web-playable arcade layout incorporating a multi-tiered item inventory logic system. Tracks math-driven catch tiers (Classes D through S) styled on high-contrast dynamic UI color configurations.</p>
+                </div>
+                <div class="btn-group">
+                    <a href="https://subisunil061-a11y.github.io/monster-hunt-game/" target="_blank" class="btn btn-primary">Play Live</a>
+                    <a href="https://github.com/subisunil061-a11y/monster-hunt-game" target="_blank" class="btn btn-secondary">Code</a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div>
+                    <span style="font-size: 0.75rem; color: var(--accent-color); font-weight: bold; text-transform: uppercase;">Mechanical Engineering (B.E.)</span>
+                    <h3 style="margin-top: 5px;">Tribological HMMC Research</h3>
+                    <p>Fabricated and analyzed an Aluminium 2024 hybrid composite reinforced with Boron Carbide ($B_4C$) and Sugarcane Bagasse Ash. Evaluated material wear rates, friction coefficients, and mechanical micro-hardness thresholds under variable loading parameters.</p>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div>
+                    <span style="font-size: 0.75rem; color: var(--accent-color); font-weight: bold; text-transform: uppercase;">Human Resources & Management (MBA)</span>
+                    <h3 style="margin-top: 5px;">Workforce Motivation Analysis</h3>
+                    <p>A comprehensive data-driven industrial study conducted at Steelmax Ltd. (Kanjikode) investigating intrinsic and extrinsic behavioral drivers influencing employee retention, performance metrics, and operational alignment.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section>
+        <h2>Featured Projects</h2>
+        <div class="project-grid">
+            
+            <div class="project-card">
+                <div>
+                    <h3>3D Mobile Sports Engine</h3>
+                    <p>An eFootball architectural clone built in Unity 6 using C#. Features a 1D animation blend tree state engine, customized physics-based projectile charge multipliers, and strict frame-stabilized physics loops.</p>
+                </div>
+                <div class="btn-group">
+                    <a href="https://github.com/subisunil061-a11y" target="_blank" class="btn btn-secondary">Code Repo</a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div>
+                    <h3>Grid Racing Game</h3>
+                    <p>An interactive grid-based navigation development deployed smoothly on the web. Focuses on array pathway logic processing, continuous intersection tracking, and minimal asset rendering speeds.</p>
+                </div>
+                <div class="btn-group">
+                    <a href="https://subisunil061-a11y.github.io/grid-racing-game/" target="_blank" class="btn btn-primary">Play Live</a>
+                    <a href="https://github.com/subisunil061-a11y/grid-racing-game" target="_blank" class="btn btn-secondary">Code</a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div>
+                    <h3>Monster Hunt Game</h3>
+                    <p>A web-playable arcade layout incorporating a multi-tiered item inventory logic system. Tracks math-driven catch tiers (Classes D through S) styled on high-contrast dynamic UI color configurations.</p>
+                </div>
+                <div class="btn-group">
+                    <a href="https://subisunil061-a11y.github.io/monster-hunt-game/" target="_blank" class="btn btn-primary">Play Live</a>
+                    <a href="https://github.com/subisunil061-a11y/monster-hunt-game" target="_blank" class="btn btn-secondary">Code</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="grid-2">
+        <div>
+            <h2>Professional Experience</h2>
+            <div class="timeline-item">
+                <h3>Quality Control Executive</h3>
+                <div class="timeline-meta">Modern Dairy Machines, Coimbatore</div>
+                <p>Spearheaded structural and operational quality inspections for mechanical dairy equipment, ensuring 100% compliance with corporate design specifications and safety standards.
+                 Collaborated closely with cross-functional manufacturing teams to identify assembly bottlenecks, reducing component defects through rigorous product testing protocol updates.
+                   Documented detailed compliance and failure analysis reports, streamlining the feedback loop between the shop floor and senior engineering teams.</p>
+            </div>
+        </div>
+        <div>
+            <h2>Education</h2>
+            <div class="timeline-item">
+                <h3>MBA (HR Major / Finance Minor)</h3>
+                <div class="timeline-meta">University of Calicut</div>
+            </div>
+            <div class="timeline-item">
+                <h3>B.E. Mechanical Engineering</h3>
+                <div class="timeline-meta">Anna University, Chennai | 2021</div>
+            </div>
+        </div>
+    </section>
+</div>
+
+</body>
+</html>
